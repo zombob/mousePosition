@@ -3,12 +3,12 @@
 
 int main(){
 	POINT p;
-	p.x = 0.0;
-	p.y = 0.0;
+	p.x = 0;
+	p.y = 0;
     while(1){
     	POINT cp;
         GetCursorPos(&cp);
-        if ((cp.x != p.x) and (cp.y != p.y)){
+        if ((cp.x != p.x) or (cp.y != p.y)) {
         	p.x = cp.x;
         	p.y = cp.y;
         	std::cout << "X: " << p.x << "\tY: " << p.y;
